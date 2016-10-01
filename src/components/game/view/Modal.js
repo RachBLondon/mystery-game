@@ -25,6 +25,9 @@ export default class Modal extends Component {
            return this.props.view.nameError ?<div className="form-control-feedback">You forgot to name your creature</div>: null
     }
 
+    getData(key){
+        return this.props.creatures.length > 0? this.props.creatures[this.props.creatures.length - 1][key] : null
+    }
 
 
     render() {
@@ -33,7 +36,7 @@ export default class Modal extends Component {
         const style = this.props.view.displayModal ? {display: 'block', backgroundColor: 'rgba(89,89,89,0.5)'} : null
 
 
-        if (newCreature) {
+        // if (newCreature) {
             return (
                 <div className="modal" style={style}>
                     <div className="modal-dialog" role="document">
@@ -56,19 +59,19 @@ export default class Modal extends Component {
                                         <div className="form-group row">
                                             <label className="col-sm-2 col-form-label">Age</label>
                                             <div className="col-sm-10">
-                                                <p className="form-control-static">{newCreature.age}</p>
+                                                <p className="form-control-static">{this.getData('age')}</p>
                                             </div>
                                         </div>
                                         <div className="form-group row">
                                             <label className="col-sm-2 col-form-label">Mana</label>
                                             <div className="col-sm-10">
-                                                <p className="form-control-static">{newCreature.mana}</p>
+                                                <p className="form-control-static">{this.getData('mana')}</p>
                                             </div>
                                         </div>
                                         <div className="form-group row">
                                             <label className="col-sm-2 col-form-label">Type</label>
                                             <div className="col-sm-10">
-                                                <p className="form-control-static">{newCreature.type}</p>
+                                                <p className="form-control-static">{this.getData('type')}</p>
                                             </div>
                                         </div>
                                     </form>
@@ -82,8 +85,6 @@ export default class Modal extends Component {
                         </div>
                     </div>
                 </div>)
-        } else {
-            return <div></div>
         }
-    }
+
 }
