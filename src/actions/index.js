@@ -12,8 +12,8 @@ export function createNewCreature(){
     const creatureTypes = ['phoenixes', 'medusas', 'hippogriffs']
     function Creature(name, age, mana, type ) {
         this.name = ""
-        this.age = Math.random() * (501 - 0) + 0
-        this.mana = Math.random() * (10001 - 1000) + 1000
+        this.age = Math.round(Math.random() * (500 - 0) + 0)
+        this.mana = Math.round(Math.random() * (10000 - 1000) + 1000)
         this.type = creatureTypes[Math.round(Math.round((Math.random() * 2)))]
     }
     const newCreature = new Creature("")
