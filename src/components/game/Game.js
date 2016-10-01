@@ -19,7 +19,11 @@ export default class Game extends Component {
                     <div>
                         {this.renderCreatures()}
                         <button type="button" className="btn btn-primary" onClick={this.handleClick.bind(this)}>Catch a Creature</button>
-                        <Modal hideModal={this.props.hideModal} view={this.props.view} creatures={this.props.creatures}/>
+                        <Modal hideModal={this.props.hideModal}
+                               view={this.props.view}
+                               creatures={this.props.creatures}
+                               addNameToNewCreature={this.props.addNameToNewCreature}
+                        />
                     </div>
                 </div>)
     }

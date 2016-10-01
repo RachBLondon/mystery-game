@@ -2,12 +2,17 @@ import React, {Component} from 'react'
 
 export default class Modal extends Component {
     handleBlur(event){
-        if(event.target.value.length > 1){
-             //send name to state
+        if(event.target.value.length > 0){
+            this.props.addNameToNewCreature(event.target.value)
         } else {
             // return error
         }
+    }
 
+    handleSubmit(){
+        //check name has been filled in
+
+        //close the modal
     }
 
     render(){
@@ -28,9 +33,9 @@ export default class Modal extends Component {
                         <div className="container">
                             <form>
                                 <div className="form-group row">
-                                    <label htmlFor="inputPassword" className="col-sm-2 col-form-label">Name</label>
+                                    <label htmlFor="inputName" className="col-sm-2 col-form-label">Name</label>
                                     <div className="col-sm-10">
-                                        <input type="password" className="form-control" id="inputPassword" placeholder="Fido" onBlur={this.handleBlur}/>
+                                        <input type="text" className="form-control" id="inputName" placeholder="Fido" onBlur={this.handleBlur.bind(this)}/>
                                     </div>
                                 </div>
                                 <div className="form-group row">
@@ -56,7 +61,7 @@ export default class Modal extends Component {
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" onClick={this.props.hideModal}>Close</button>
-                        <button type="button" className="btn btn-primary" onClick={this.handleClick}>Save changes</button>
+                        <button type="button" className="btn btn-primary" onClick={this.handleSubmit.bind(this)}>Save changes</button>
                     </div>
                 </div>
             </div>

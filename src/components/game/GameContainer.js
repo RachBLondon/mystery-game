@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 import {
     showModal,
     hideModal,
-    createNewCreature
+    createNewCreature,
+    addNameToNewCreature
 } from './../../actions'
 
 
@@ -16,6 +17,7 @@ class GameContainer extends Component {
                       showModal={this.props.showModal}
                       hideModal={this.props.hideModal}
                       createNewCreature={this.props.createNewCreature}
+                      addNameToNewCreature={this.props.addNameToNewCreature}
         />)
     }
 }
@@ -29,5 +31,6 @@ function mapStateToProps(state){
 export default connect(mapStateToProps, {
     showModal,
     hideModal,
-    createNewCreature
+    createNewCreature,
+    addNameToNewCreature
 })(GameContainer)

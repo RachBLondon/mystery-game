@@ -21,3 +21,8 @@ export function createNewCreature(){
     return {type: actionTypes.CREATE_NEW_CREATURE, creature : newCreature}
 }
 
+
+export function addNameToNewCreature(name){
+    return{type: actionTypes.ADD_NAME_TO_NEW_CREATURE, name :name}
+}
+
