@@ -33,3 +33,7 @@ export function newGame(){
     return { type: actionTypes.NEW_GAME }
 }
 
+export function sortByAge(){
+    return { type: actionTypes.SORT_BY_AGE }
+}
+

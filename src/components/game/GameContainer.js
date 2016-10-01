@@ -7,7 +7,8 @@ import {
     createNewCreature,
     addNameToNewCreature,
     notifyError,
-    newGame
+    newGame,
+    sortByAge
 } from './../../actions'
 
 
@@ -23,6 +24,7 @@ class GameContainer extends Component {
                       addNameToNewCreature={this.props.addNameToNewCreature}
                       notifyError={this.props.notifyError}
                       newGame={this.props.newGame}
+                      sortByAge={this.props.sortByAge}
 
         />)
     }
@@ -40,5 +42,6 @@ export default connect(mapStateToProps, {
     createNewCreature,
     addNameToNewCreature,
     notifyError,
-    newGame
+    newGame,
+    sortByAge
 })(GameContainer)

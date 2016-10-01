@@ -2,6 +2,7 @@ import React, {Component }from 'react'
 import Creature from './Creature'
 import Modal from './view/Modal'
 import ScoreCard from './view/ScoreCard'
+import SortTabs from './view/SortTabs'
 
 export default class Game extends Component {
     handleClick(){
@@ -15,12 +16,15 @@ export default class Game extends Component {
 
 
     renderCreatures(){
-        if(this.props.creatures) {
-            return this.props.creatures.map(function (creature, i) {
-                return <Creature key={i} creature={creature}/>
-            })
-        }
+        console.log("renderCreatures" ,this.props)
+        return this.props.creatures.map(function (creature, i) {
+            return <Creature key={i} creature={creature}/>
+        })
     }
+
+    // componentWillRecieveProps(){
+    //
+    // }
 
     renderButton(){
         if(this.props.creatures.length <= 9 ){
@@ -35,8 +39,9 @@ export default class Game extends Component {
                     <div>
                         <button type="button" className="btn btn-primary" onClick={this.newGame.bind(this)}> Start a new game </button>
                         <div className="container">
+                            <SortTabs sortByAge={this.props.sortByAge}/>
                             <div className="row">
-                            {this.renderCreatures()}
+                            {this.renderCreatures.call(this)}
                             </div>
                         </div>
                         {this.renderButton()}
