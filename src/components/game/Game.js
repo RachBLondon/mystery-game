@@ -8,17 +8,33 @@ export default class Game extends Component {
         this.props.showModal()
     }
 
+    newGame(){
+        this.props.newGame()
+    }
+
+
     renderCreatures(){
-        return this.props.creatures.map(function(creature, i ){
-            return <Creature key={i} creature={creature} />
-        } )
+        if(this.props.creatures) {
+            return this.props.creatures.map(function (creature, i) {
+                return <Creature key={i} creature={creature}/>
+            })
+        }
+    }
+
+    renderButton(){
+        if(this.props.creatures.length <= 9 ){
+            return <button type="button" className="btn btn-primary" onClick={this.handleClick.bind(this)}>Catch a Creature</button>
+        } else {
+            return <button type="button" className="btn btn-primary" onClick={this.newGame.bind(this)}> Basket's Full, start a new game </button>
+        }
     }
 
     render(){
         return(<div>
                     <div>
+                        <button type="button" className="btn btn-primary" onClick={this.newGame.bind(this)}> Start a new game </button>
                         {this.renderCreatures()}
-                        <button type="button" className="btn btn-primary" onClick={this.handleClick.bind(this)}>Catch a Creature</button>
+                        {this.renderButton()}
                         <Modal hideModal={this.props.hideModal}
                                view={this.props.view}
                                creatures={this.props.creatures}

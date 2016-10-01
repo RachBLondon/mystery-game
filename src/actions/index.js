@@ -17,7 +17,6 @@ export function createNewCreature(){
         this.type = creatureTypes[Math.round(Math.round((Math.random() * 2)))]
     }
     const newCreature = new Creature("")
-
     return {type: actionTypes.CREATE_NEW_CREATURE, creature : newCreature}
 }
 
@@ -28,5 +27,9 @@ export function addNameToNewCreature(name){
 
 export function notifyError(){
     return { type: actionTypes.NOTIFY_ERROR }
+}
+
+export function newGame(){
+    return { type: actionTypes.NEW_GAME }
 }
 
