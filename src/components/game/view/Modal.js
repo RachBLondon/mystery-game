@@ -1,23 +1,31 @@
 import React, {Component} from 'react'
 
+
 export default class Modal extends Component {
+
     handleBlur(event){
         if(event.target.value.length > 0){
             this.props.addNameToNewCreature(event.target.value)
+            event.target.value = ""
         } else {
             // return error
         }
     }
 
     handleSubmit(){
-        //check name has been filled in
+        if(this.props.creatures[this.props.creatures.length -1 ]['name'].length > 0){
+            this.props.hideModal()
+        } else {
+            //send error message
+        }
 
-        //close the modal
     }
 
+
+
     render(){
-    const style = this.props.view.displayModal ? {display: 'block', backgroundColor: 'rgba(89,89,89,0.5)'} : null
     const newCreature = this.props.creatures[this.props.creatures.length -1]
+    const style = this.props.view.displayModal ? {display: 'block', backgroundColor: 'rgba(89,89,89,0.5)'} : null
 
      return(
         <div className="modal" style={style}>
