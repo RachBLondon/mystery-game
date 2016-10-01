@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import view from './view'
+import creatures from './creatures'
 
 const rootReducer = combineReducers({
-    view
+    view,
+    creatures
 })
 
-export default rootReducer;
+export default rootReducer
