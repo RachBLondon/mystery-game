@@ -1,6 +1,7 @@
 import React, {Component }from 'react'
 import Creature from './Creature'
 import Modal from './view/Modal'
+import ScoreCard from './view/ScoreCard'
 
 export default class Game extends Component {
     handleClick(){
@@ -35,6 +36,7 @@ export default class Game extends Component {
                         <button type="button" className="btn btn-primary" onClick={this.newGame.bind(this)}> Start a new game </button>
                         {this.renderCreatures()}
                         {this.renderButton()}
+                        <ScoreCard creatures={this.props.creatures}/>
                         <Modal hideModal={this.props.hideModal}
                                view={this.props.view}
                                creatures={this.props.creatures}

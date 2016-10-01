@@ -13,6 +13,7 @@ import {
 
 class GameContainer extends Component {
 
+
     render() {
         return (<Game creatures={this.props.creatures}
                       view={this.props.view}
@@ -22,6 +23,7 @@ class GameContainer extends Component {
                       addNameToNewCreature={this.props.addNameToNewCreature}
                       notifyError={this.props.notifyError}
                       newGame={this.props.newGame}
+
         />)
     }
 }
