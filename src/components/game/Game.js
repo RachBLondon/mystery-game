@@ -34,7 +34,11 @@ export default class Game extends Component {
         return(<div>
                     <div>
                         <button type="button" className="btn btn-primary" onClick={this.newGame.bind(this)}> Start a new game </button>
-                        {this.renderCreatures()}
+                        <div className="container">
+                            <div className="row">
+                            {this.renderCreatures()}
+                            </div>
+                        </div>
                         {this.renderButton()}
                         <ScoreCard creatures={this.props.creatures}/>
                         <Modal hideModal={this.props.hideModal}

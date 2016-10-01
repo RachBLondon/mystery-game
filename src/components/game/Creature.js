@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 export default class Creature extends Component {
     render(){
         return (
-            <div>
+            <div className="col-md-3">
                 <h5>{this.props.creature.name}</h5>
                 <p>Age : {this.props.creature.age}</p>
                 <p>Mana : {this.props.creature.mana}</p>
