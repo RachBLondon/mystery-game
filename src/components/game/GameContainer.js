@@ -5,7 +5,8 @@ import {
     showModal,
     hideModal,
     createNewCreature,
-    addNameToNewCreature
+    addNameToNewCreature,
+    notifyError
 } from './../../actions'
 
 
@@ -18,6 +19,7 @@ class GameContainer extends Component {
                       hideModal={this.props.hideModal}
                       createNewCreature={this.props.createNewCreature}
                       addNameToNewCreature={this.props.addNameToNewCreature}
+                      notifyError={this.props.notifyError}
         />)
     }
 }
@@ -32,5 +34,6 @@ export default connect(mapStateToProps, {
     showModal,
     hideModal,
     createNewCreature,
-    addNameToNewCreature
+    addNameToNewCreature,
+    notifyError
 })(GameContainer)

@@ -23,6 +23,7 @@ export default class Game extends Component {
                                view={this.props.view}
                                creatures={this.props.creatures}
                                addNameToNewCreature={this.props.addNameToNewCreature}
+                               notifyError={this.props.notifyError}
                         />
                     </div>
                 </div>)

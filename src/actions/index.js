@@ -26,3 +26,7 @@ export function addNameToNewCreature(name){
     return{type: actionTypes.ADD_NAME_TO_NEW_CREATURE, name :name}
 }
 
+export function notifyError(){
+    return { type: actionTypes.NOTIFY_ERROR }
+}
+
