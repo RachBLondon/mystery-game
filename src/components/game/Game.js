@@ -51,6 +51,7 @@ export default class Game extends Component {
                                creatures={this.props.creatures}
                                addNameToNewCreature={this.props.addNameToNewCreature}
                                notifyError={this.props.notifyError}
+                               sortByAge={this.props.sortByAge}
                         />
                     </div>
                 </div>)

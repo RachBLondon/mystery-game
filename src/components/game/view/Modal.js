@@ -16,6 +16,7 @@ export default class Modal extends Component {
         if(this.props.creatures[this.props.creatures.length -1 ]['name'].length > 0){
             this.props.hideModal()
             ReactDOM.findDOMNode(this.refs.inputName).value = ''
+            this.props.sortByAge()
         } else {
             this.props.notifyError()
         }

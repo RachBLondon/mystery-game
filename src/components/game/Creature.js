@@ -8,6 +8,7 @@ export default class Creature extends Component {
                 <p>Age : {this.props.creature.age}</p>
                 <p>Mana : {this.props.creature.mana}</p>
                 <p>Type : {this.props.creature.type}</p>
+                <button type="button" className="btn btn-secondary">Set Free</button>
             </div>
         )
     }
