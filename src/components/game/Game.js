@@ -32,14 +32,24 @@ export default class Game extends Component {
     render(){
         return(<div>
                     <div>
-                        <button type="button" className="btn btn-primary" onClick={this.newGame.bind(this)}> Start a new game </button>
+
+
+                        <nav className="navbar navbar-light bg-faded">
+                            <a className="navbar-brand" href="#">Mythical Animal Hunt</a>
+                            <form className="form-inline pull-xs-right">
+                                <button type="button" className="btn btn-primary" onClick={this.newGame.bind(this)}> Start a new game </button>
+                            </form>
+                        </nav>
+
                         <div className="container">
                             <SortTabs sortBy={this.props.sortBy} sortKey={this.props.sortKey}/>
                             <div className="row">
                             {this.renderCreatures.call(this)}
                             </div>
                         </div>
-                        {this.renderButton()}
+                        <div className='c-play-button'>
+                            {this.renderButton()}
+                        </div>
                         <ScoreCard creatures={this.props.creatures}/>
                         <Modal hideModal={this.props.hideModal}
                                view={this.props.view}

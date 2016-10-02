@@ -9,7 +9,11 @@ export default class SortTabs extends Component {
     render(){
         return(
             <div className="c-sort-tabs">
+
                 <ul className="nav nav-pills">
+                    <li className="nav-item">
+                        <a className='nav-link disabled'>Sort By</a>
+                    </li>
                     <li className="nav-item">
                         <a className={this.toggleClass('age')} onClick={this.props.sortBy.bind(null, 'age')}>Age</a>
                     </li>

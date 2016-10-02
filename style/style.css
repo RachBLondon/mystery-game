@@ -1,7 +1,15 @@
 .c-sort-tabs {
     margin: 20px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px;
 }
 
 .u_set_free {
     background-color: orange;
+}
+
+.c-play-button {
+    display: flex;
+    justify-content: center;
 }
