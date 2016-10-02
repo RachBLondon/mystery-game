@@ -17,7 +17,7 @@ export default class SortTabs extends Component {
                         <a className={this.toggleClass('mana')} onClick={this.props.sortBy.bind(null, 'mana')}>Mana</a>
                     </li>
                     <li className="nav-item">
-                        <a className={this.toggleClass('time')} href="#">Time</a>
+                        <a className={this.toggleClass('time')} onClick={this.props.sortBy.bind(null, 'time')}>Time</a>
                     </li>
                 </ul>
             </div>

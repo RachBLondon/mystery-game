@@ -10,11 +10,12 @@ export function hideModal(){
 
 export function createNewCreature(){
     const creatureTypes = ['phoenixes', 'medusas', 'hippogriffs']
-    function Creature(name, age, mana, type ) {
+    function Creature(name, age, mana, type, time ) {
         this.name = ""
         this.age = Math.round(Math.random() * (500 - 0) + 0)
         this.mana = Math.round(Math.random() * (10000 - 1000) + 1000)
         this.type = creatureTypes[Math.round(Math.round((Math.random() * 2)))]
+        this.time =  new Date().getTime()
     }
     const newCreature = new Creature("")
     return {type: actionTypes.CREATE_NEW_CREATURE, creature : newCreature}
