@@ -8,7 +8,8 @@ import {
     addNameToNewCreature,
     notifyError,
     newGame,
-    sortBy
+    sortBy,
+    setFree
 } from './../../actions'
 
 
@@ -26,6 +27,8 @@ class GameContainer extends Component {
                       newGame={this.props.newGame}
                       sortBy={this.props.sortBy}
                       sortKey={this.props.sortKey}
+                      modalContent={this.props.modalContent}
+                      setFree={this.props.setFree}
         />)
     }
 }
@@ -34,7 +37,8 @@ function mapStateToProps(state){
     return {
         view : state.view,
         sortKey : state.view.sortKey,
-        creatures : state.creatures
+        creatures : state.creatures,
+        modalContent : state.view.modalContent
     }
 }
 export default connect(mapStateToProps, {
@@ -44,5 +48,6 @@ export default connect(mapStateToProps, {
     addNameToNewCreature,
     notifyError,
     newGame,
-    sortBy
+    sortBy,
+    setFree
 })(GameContainer)

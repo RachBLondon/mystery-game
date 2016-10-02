@@ -16,10 +16,9 @@ export default class Game extends Component {
 
 
     renderCreatures(){
-        console.log("renderCreatures" ,this.props)
         return this.props.creatures.map(function (creature, i) {
-            return <Creature key={i} creature={creature}/>
-        })
+            return <Creature key={i} creature={creature} setFree={this.props.setFree}/>
+        }, this)
     }
 
     renderButton(){
@@ -49,6 +48,7 @@ export default class Game extends Component {
                                notifyError={this.props.notifyError}
                                sortBy={this.props.sortBy}
                                sortKey={this.props.sortKey}
+                               modalContent={this.props.modalContent}
                         />
                     </div>
                 </div>)

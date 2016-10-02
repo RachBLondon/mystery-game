@@ -3,8 +3,7 @@ import {
     ADD_NAME_TO_NEW_CREATURE,
     NEW_GAME,
     SORT_BY,
-    SORT_BY_MANA,
-    SORT_BY_TIME
+    START_SETTING_FREE
 } from './../actions/actionTypes'
 
 import {creatures} from './../dummyData'
@@ -23,6 +22,14 @@ function sortByValue(value, array){
     })
 }
 
+function findCreature(id, array) {
+    array.map(creature => {
+        if(creature.id === id){
+            creature.settingFree = true
+    }
+})
+}
+
 export default function view(state = [], action){
     switch(action.type){
         case CREATE_NEW_CREATURE:
@@ -36,6 +43,10 @@ export default function view(state = [], action){
             return []
         case SORT_BY:
             return Object.assign([], sortByValue(action.key, state))
+        case START_SETTING_FREE :
+            const stateWithSetFree = state
+            findCreature(action.id, stateWithSetFree)
+            return stateWithSetFree
         default:
             return state
     }

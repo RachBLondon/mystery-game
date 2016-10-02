@@ -31,7 +31,6 @@ export default class NewCreatureForm extends Component {
     }
 
 
-
     render(){
         const nameInputClass = this.props.view.nameError ? "form-group row has-danger" : "form-group row"
         const newCreature = this.props.creatures[this.props.creatures.length - 1]
