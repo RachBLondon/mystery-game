@@ -52,8 +52,8 @@ describe('Creature Reducer', function () {
         expect(state).to.eql([])
     })
 
-    it('SORT_BY_AGE', ()=>{
-        const action = {type: actions.SORT_BY_AGE}
+    it('SORT_BY', ()=>{
+        const action = {type: actions.SORT_BY, key : 'age'}
         const state = reducer (   [
             {
                 name: 'Freddie',
