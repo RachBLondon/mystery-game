@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test:runner": "mocha --recursive ./test/.setup.js ./test/*"
+    "test": "mocha --recursive ./test/.setup.js ./test/*"
   },
   "author": "",
   "license": "ISC",
