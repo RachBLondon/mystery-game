@@ -26,7 +26,8 @@ function sortByValue(value, array){
 export default function view(state = [], action){
     switch(action.type){
         case CREATE_NEW_CREATURE:
-            return state.concat(action.creature)
+            const stateWithNewCreature = state.concat(action.creature)
+            return stateWithNewCreature
         case ADD_NAME_TO_NEW_CREATURE:
             const newState = state
             newState[newState.length -1]['name'] = action.name
