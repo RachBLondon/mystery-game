@@ -9,7 +9,8 @@ import {
     notifyError,
     newGame,
     sortBy,
-    setFree
+    setFree,
+    finishSettingFree
 } from './../../actions'
 
 
@@ -29,6 +30,7 @@ class GameContainer extends Component {
                       sortKey={this.props.sortKey}
                       modalContent={this.props.modalContent}
                       setFree={this.props.setFree}
+                      finishSettingFree={this.props.finishSettingFree}
         />)
     }
 }
@@ -49,5 +51,6 @@ export default connect(mapStateToProps, {
     notifyError,
     newGame,
     sortBy,
-    setFree
+    setFree,
+    finishSettingFree
 })(GameContainer)

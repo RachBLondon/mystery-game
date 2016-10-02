@@ -17,7 +17,7 @@ export default class Game extends Component {
 
     renderCreatures(){
         return this.props.creatures.map(function (creature, i) {
-            return <Creature key={i} creature={creature} setFree={this.props.setFree}/>
+            return <Creature key={i} creature={creature} setFree={this.props.setFree} finishSettingFree={this.props.finishSettingFree}/>
         }, this)
     }
 

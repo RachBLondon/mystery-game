@@ -43,11 +43,10 @@ export function sortBy(key){
 }
 
 export function setFree(id) {
-    console.log("in setFree", id)
     return { type :actionTypes.START_SETTING_FREE, id :id}
+}
 
-    setTimeout(function(){
-        return  { type : actionTypes.FINISH_SETTING_FREE}
-    }, 15000)
+export function finishSettingFree(id) {
+    return {type: actionTypes.FINISH_SETTING_FREE, id: id}
 }
 
