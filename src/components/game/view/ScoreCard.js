@@ -13,10 +13,10 @@ export default class ScoreCard extends Component {
 
     render(){
         return (
-            <ul>
-                <li>Total Age : {this.tally(this.props.creatures, 'age')}</li>
-                <li>Total Mana : {this.tally(this.props.creatures, 'mana')}</li>
-            </ul>
+            <div className="c-score-card">
+                <p>Total Age : {this.tally(this.props.creatures, 'age')}</p>
+                <p>Total Mana : {this.tally(this.props.creatures, 'mana')}</p>
+            </div>
         )
     }
 }

@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
+import ScoreCard from './ScoreCard'
+
 
 export default class SortTabs extends Component {
 
     toggleClass(key){
-        return this.props.sortKey === key? 'nav-link active': 'nav-link'
+        return this.props.sortKey === key? 'nav-link active u-active': 'nav-link'
     }
 
     render(){
         return(
             <div className="c-sort-tabs">
+                <ScoreCard creatures={this.props.creatures}/>
 
                 <ul className="nav nav-pills">
                     <li className="nav-item">

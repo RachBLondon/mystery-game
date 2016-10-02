@@ -72,7 +72,7 @@ export default class NewCreatureForm extends Component {
                         </form>
                     </div>
                 </div>
-                <div className="modal-footer">
+                <div className="modal-footer c-play-button">
                     <button type="button" className="btn btn-primary" onClick={this.handleSubmit.bind(this)}>Capture your new creature
                     </button>
                 </div>

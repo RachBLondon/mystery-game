@@ -1,15 +1,87 @@
 .c-sort-tabs {
     margin: 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 0px;
 }
 
 .u_set_free {
-    background-color: orange;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0s 15s, opacity 15s linear;
+    background-color: #00d6b2;
+    border-radius: 5rem;
+}
+.c-sort-tabs .nav .nav-item .u-active {
+    background-color: rgb(101, 165, 162);
+    border-color: rgb(101, 165, 162);
+    transition-duration: 1s;
+}
+
+.c-sort-tabs .nav .nav-item .u-active:hover {
+    background-color: rgb(217, 135, 37);
+    border-color: rgb(217, 135, 37);
 }
 
 .c-play-button {
     display: flex;
     justify-content: center;
+    padding: 10px;
+}
+.c-play-button button {
+    background-color: rgb(16, 79, 116);
+    border-color: rgb(16, 79, 116);
+    transition-duration: 1s;
+}
+
+.c-play-button button:hover {
+    background-color: rgb(101, 165, 162);
+    border-color: rgb(101, 165, 162);
+}
+
+.btn-outline-secondary {
+    transition-duration: 1s;
+}
+
+.c-new-game {
+    border-color: #f7f7f9;
+}
+
+.c-creature {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 15s linear;
+    background-color: rgb(217, 135, 37);
+    border-radius: 0.25rem;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.c-creature h5 {
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.modal-header h4 {
+    font-family: 'Fredericka the Great', cursive;
+}
+
+
+.c-creature-image {
+    border-radius: 50%;
+    height: 60px;
+}
+
+.c-score-card {
+    background-color: rgb(244, 237, 227);
+    padding: 20px;
+    border-radius: 0.25rem;
+}
+
+.c-app .c-nav-bar{
+    background-color:  rgb(244, 237, 227);
+}
+.c-app .c-nav-bar a {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 4em;
 }
