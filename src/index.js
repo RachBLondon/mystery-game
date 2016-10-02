@@ -6,8 +6,6 @@ import App from './components/app'
 import rootReducers from './reducers'
 import DevTools from './components/DevTools'
 
-// const createStoreWithMiddleware = applyMiddleware()(createStore)
-
 export default function configureStore(initalState) {
   const createStoreWithMiddleware = createStore(
       rootReducers,
