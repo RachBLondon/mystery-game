@@ -3,7 +3,8 @@ import {
     ADD_NAME_TO_NEW_CREATURE,
     NEW_GAME,
     SORT_BY,
-    START_SETTING_FREE
+    START_SETTING_FREE,
+    FINISH_SETTING_FREE
 } from './../actions/actionTypes'
 
 import {creatures} from './../dummyData'
@@ -30,6 +31,10 @@ function findCreature(id, array) {
 })
 }
 
+function removeSetFree(id, value) {
+    return value['id'] != id
+}
+
 export default function view(state = [], action){
     switch(action.type){
         case CREATE_NEW_CREATURE:
@@ -47,6 +52,10 @@ export default function view(state = [], action){
             const stateWithSetFree = state
             findCreature(action.id, stateWithSetFree)
             return stateWithSetFree
+        case FINISH_SETTING_FREE :
+            const creatures = state
+            const notSetFree = creatures.filter(removeSetFree.bind(null, action.id))
+            return notSetFree
         default:
             return state
     }
