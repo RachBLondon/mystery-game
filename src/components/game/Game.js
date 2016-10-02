@@ -22,10 +22,6 @@ export default class Game extends Component {
         })
     }
 
-    // componentWillRecieveProps(){
-    //
-    // }
-
     renderButton(){
         if(this.props.creatures.length <= 9 ){
             return <button type="button" className="btn btn-primary" onClick={this.handleClick.bind(this)}>Catch a Creature</button>
