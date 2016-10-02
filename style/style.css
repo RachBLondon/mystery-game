@@ -11,6 +11,7 @@
     transition: all 0s 15s, opacity 15s linear;
     background-color: #00d6b2;
     border-radius: 5rem;
+    text-align: center;
 }
 .c-sort-tabs .nav .nav-item .u-active {
     background-color: rgb(101, 165, 162);
