@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "test:runner": "mocha --recursive ./test/.setup.js ./test/*"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +19,10 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "babel-register": "^6.16.3",
+    "jsdom": "^9.5.0",
     "lodash": "^3.10.1",
+    "mocha": "^3.1.0",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
