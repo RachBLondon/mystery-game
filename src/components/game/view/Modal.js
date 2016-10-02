@@ -13,7 +13,6 @@ export default class Modal extends Component {
     }
 
     handleSubmit(){
-        console.log("handleSubmit ", this.props)
         if(this.props.creatures[this.props.creatures.length -1 ]['name'].length > 0){
             this.props.hideModal()
             ReactDOM.findDOMNode(this.refs.inputName).value = ''

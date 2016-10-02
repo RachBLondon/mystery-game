@@ -3,7 +3,7 @@ import {
     HIDE_MODAL,
     NOTIFY_ERROR,
     ADD_NAME_TO_NEW_CREATURE,
-    SORT_BY_AGE
+    SORT_BY
 } from './../actions/actionTypes'
 
 
@@ -17,6 +17,8 @@ export default function view( state = { sortKey : 'age'}, action) {
             return Object.assign({}, state, { nameError : true})
         case ADD_NAME_TO_NEW_CREATURE :
             return Object.assign({}, state, {nameError: false})
+        case SORT_BY :
+            return Object.assign({}, state, {sortKey : action.key})
         default:
             return state
     }

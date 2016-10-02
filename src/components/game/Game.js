@@ -22,10 +22,6 @@ export default class Game extends Component {
         })
     }
 
-    // componentWillRecieveProps(){
-    //
-    // }
-
     renderButton(){
         if(this.props.creatures.length <= 9 ){
             return <button type="button" className="btn btn-primary" onClick={this.handleClick.bind(this)}>Catch a Creature</button>
@@ -39,7 +35,7 @@ export default class Game extends Component {
                     <div>
                         <button type="button" className="btn btn-primary" onClick={this.newGame.bind(this)}> Start a new game </button>
                         <div className="container">
-                            <SortTabs sortByAge={this.props.sortByAge}/>
+                            <SortTabs sortBy={this.props.sortBy} sortKey={this.props.sortKey}/>
                             <div className="row">
                             {this.renderCreatures.call(this)}
                             </div>
