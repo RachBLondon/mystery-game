@@ -1,7 +1,7 @@
 import React from 'react'
 import {expect} from 'chai'
 import {shallow, mount, render} from 'enzyme'
-import App from '../../src/components/app'
+import App from '../../src/components/App'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 import rootReducers from './../../src/reducers'
