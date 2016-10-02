@@ -7,7 +7,6 @@ import {
     FINISH_SETTING_FREE
 } from './../actions/actionTypes'
 
-import {creatures} from './../dummyData'
 
 function sortByValue(value, array){
     return array.sort(function(a, b) {

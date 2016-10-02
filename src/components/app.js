@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import DevToools from './DevTools'
 import GameContainer from './game/GameContainer'
 
 export default class App extends Component {
@@ -8,7 +7,6 @@ export default class App extends Component {
       <div>
         <h1> Mystery Game </h1>
         <GameContainer/>
-        <DevToools/>
       </div>
     );
   }

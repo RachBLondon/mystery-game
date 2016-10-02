@@ -5,7 +5,7 @@ export default class Creature extends Component {
         this.props.setFree(id)
         setTimeout(()=>{
             this.props.finishSettingFree(id)
-        }, 1000)
+        }, 15000)
     }
 
     render(){
