@@ -8,7 +8,7 @@ import {
     addNameToNewCreature,
     notifyError,
     newGame,
-    sortByAge
+    sortBy
 } from './../../actions'
 
 
@@ -24,8 +24,8 @@ class GameContainer extends Component {
                       addNameToNewCreature={this.props.addNameToNewCreature}
                       notifyError={this.props.notifyError}
                       newGame={this.props.newGame}
-                      sortByAge={this.props.sortByAge}
-
+                      sortBy={this.props.sortBy}
+                      sortKey={this.props.sortKey}
         />)
     }
 }
@@ -33,6 +33,7 @@ class GameContainer extends Component {
 function mapStateToProps(state){
     return {
         view : state.view,
+        sortKey : state.view.sortKey,
         creatures : state.creatures
     }
 }
@@ -43,5 +44,5 @@ export default connect(mapStateToProps, {
     addNameToNewCreature,
     notifyError,
     newGame,
-    sortByAge
+    sortBy
 })(GameContainer)

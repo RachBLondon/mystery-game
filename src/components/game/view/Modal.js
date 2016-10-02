@@ -13,10 +13,11 @@ export default class Modal extends Component {
     }
 
     handleSubmit(){
+        console.log("handleSubmit ", this.props)
         if(this.props.creatures[this.props.creatures.length -1 ]['name'].length > 0){
             this.props.hideModal()
             ReactDOM.findDOMNode(this.refs.inputName).value = ''
-            this.props.sortByAge()
+            this.props.sortBy(this.props.sortKey)
         } else {
             this.props.notifyError()
         }
@@ -37,7 +38,6 @@ export default class Modal extends Component {
         const style = this.props.view.displayModal ? {display: 'block', backgroundColor: 'rgba(89,89,89,0.5)'} : null
 
 
-        // if (newCreature) {
             return (
                 <div className="modal" style={style}>
                     <div className="modal-dialog" role="document">

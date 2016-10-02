@@ -2,7 +2,7 @@ import {
     CREATE_NEW_CREATURE,
     ADD_NAME_TO_NEW_CREATURE,
     NEW_GAME,
-    SORT_BY_AGE,
+    SORT_BY,
     SORT_BY_MANA,
     SORT_BY_TIME
 } from './../actions/actionTypes'
@@ -33,8 +33,8 @@ export default function view(state = [], action){
             return newState
         case NEW_GAME :
             return []
-        case SORT_BY_AGE:
-            return Object.assign([], sortByValue('age', state))
+        case SORT_BY:
+            return Object.assign([], sortByValue(action.key, state))
         default:
             return state
     }
