@@ -16,10 +16,9 @@ export default class Game extends Component {
 
 
     renderCreatures(){
-        console.log("renderCreatures" ,this.props)
         return this.props.creatures.map(function (creature, i) {
-            return <Creature key={i} creature={creature}/>
-        })
+            return <Creature key={i} creature={creature} setFree={this.props.setFree} finishSettingFree={this.props.finishSettingFree}/>
+        }, this)
     }
 
     renderButton(){
@@ -35,7 +34,7 @@ export default class Game extends Component {
                     <div>
                         <button type="button" className="btn btn-primary" onClick={this.newGame.bind(this)}> Start a new game </button>
                         <div className="container">
-                            <SortTabs sortByAge={this.props.sortByAge}/>
+                            <SortTabs sortBy={this.props.sortBy} sortKey={this.props.sortKey}/>
                             <div className="row">
                             {this.renderCreatures.call(this)}
                             </div>
@@ -47,6 +46,9 @@ export default class Game extends Component {
                                creatures={this.props.creatures}
                                addNameToNewCreature={this.props.addNameToNewCreature}
                                notifyError={this.props.notifyError}
+                               sortBy={this.props.sortBy}
+                               sortKey={this.props.sortKey}
+                               modalContent={this.props.modalContent}
                         />
                     </div>
                 </div>)

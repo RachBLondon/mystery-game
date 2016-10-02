@@ -8,7 +8,9 @@ import {
     addNameToNewCreature,
     notifyError,
     newGame,
-    sortByAge
+    sortBy,
+    setFree,
+    finishSettingFree
 } from './../../actions'
 
 
@@ -24,8 +26,11 @@ class GameContainer extends Component {
                       addNameToNewCreature={this.props.addNameToNewCreature}
                       notifyError={this.props.notifyError}
                       newGame={this.props.newGame}
-                      sortByAge={this.props.sortByAge}
-
+                      sortBy={this.props.sortBy}
+                      sortKey={this.props.sortKey}
+                      modalContent={this.props.modalContent}
+                      setFree={this.props.setFree}
+                      finishSettingFree={this.props.finishSettingFree}
         />)
     }
 }
@@ -33,7 +38,9 @@ class GameContainer extends Component {
 function mapStateToProps(state){
     return {
         view : state.view,
-        creatures : state.creatures
+        sortKey : state.view.sortKey,
+        creatures : state.creatures,
+        modalContent : state.view.modalContent
     }
 }
 export default connect(mapStateToProps, {
@@ -43,5 +50,7 @@ export default connect(mapStateToProps, {
     addNameToNewCreature,
     notifyError,
     newGame,
-    sortByAge
+    sortBy,
+    setFree,
+    finishSettingFree
 })(GameContainer)

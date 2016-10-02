@@ -4,15 +4,13 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 import App from './components/app'
 import rootReducers from './reducers'
-import DevTools from './components/DevTools'
 
 export default function configureStore(initalState) {
   const createStoreWithMiddleware = createStore(
       rootReducers,
       initalState,
         compose(
-            applyMiddleware(),
-            DevTools.instrument())
+            applyMiddleware())
         )
       return createStoreWithMiddleware
 }
