@@ -18,4 +18,6 @@ To run tests `npm run test`
 - CSS transitions on modal
 - allow animals to not be caught
 - Post CSS to auto prefix CSS
+- Add test coverage report and imcrease coverage of unit tests
+
 
