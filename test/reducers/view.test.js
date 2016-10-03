@@ -14,7 +14,7 @@ describe('React View Reducer', function () {
     it('HIDE_MODAL', () => {
         const action = { type: actions.HIDE_MODAL }
         const state = reducer({}, action)
-        expect(state).to.eql({ displayModal: false })
+        expect(state).to.eql({ displayModal: false, modalContent :null})
     })
 
     it('NOTIFY_ERROR', ()=>{
