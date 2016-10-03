@@ -10,7 +10,7 @@ To run tests `npm run test`
 - React
 - Enzyme (testing React components)
 - Redux
-- node / npm
+- node / npm (node/6.3.1)
 
 
 ##Improvements
