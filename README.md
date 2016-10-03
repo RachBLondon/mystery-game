@@ -3,6 +3,7 @@
 To install `npm i`
 To start `npm start`
 To run tests `npm run test`
+The game will play at localhost:8080
 
 ##Tech User
 - Bootstrap CSS
