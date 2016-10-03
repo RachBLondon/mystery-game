@@ -19,9 +19,6 @@ describe('<Game />', ()=> {
         wrapper = shallow(<Game creatures={creatures} nameError={false}/>)
     })
 
-    it('renders a ScoreCard', ()=>{
-        expect(wrapper.find(ScoreCard)).to.have.length(1)
-    })
 
     it('renders SortTabs', ()=>{
         expect(wrapper.find(SortTabs)).to.have.length(1)
