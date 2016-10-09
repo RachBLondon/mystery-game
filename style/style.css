@@ -1,6 +1,14 @@
 body {
     font-family: 'Cardo', Georgia, serif !important;
+    background: url('./../assets/rolling-hills-backround.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+/*.container {*/
+    /*background-image: url('./../assets/rolling-hills-backround.png');*/
+/*}*/
 
 .c-sort-tabs {
     margin: 20px;
