@@ -8,7 +8,7 @@ body {
 }
 
 .c-sort-tabs {
-    margin: 10px 20px 100px;
+    margin: 10px 20px 130px;
     display: flex;
     justify-content: flex-end;
     padding: 0px;
@@ -64,16 +64,16 @@ body {
     visibility: visible;
     opacity: 1;
     transition: opacity 15s linear;
-    background-color: rgb(217, 135, 37);
+    background-color: rgb(246, 239, 229);
     border-radius: 0.25rem;
     text-align: center;
     padding: 10px;
     margin: 10px;
 }
 
-.c-creature h5 {
-    font-family: 'Almendra Display', cursive;
-}
+/*.c-creature h5 {*/
+    /*font-family: 'Almendra Display', cursive;*/
+/*}*/
 
 .modal-header h4 {
     font-family: 'Almendra Display', cursive;
@@ -144,8 +144,6 @@ body {
     left: 10px;
     z-index: 1;
 }
-
-
 
 @keyframes float {
     from {
