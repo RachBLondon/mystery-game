@@ -21,9 +21,17 @@ export default class Creature extends Component {
         }
     }
 
+    renderButton(){
+        if(!this.props.creature.settingFree){
+            return <button type="button" className="btn btn-secondary" onClick={this.handleClick.bind(this, this.props.creature.id)}>Set me free!</button>
+        } else {
+            return <p><strong>I'm Free</strong></p>
+        }
+    }
+
+
     render(){
         let  toggleSetFree  = this.props.creature.settingFree ? 'u_set_free col-md-3' : 'col-md-3 c-creature'
-        const toggleButtonText = this.props.creature.settingFree ? "I'm free!": 'Set me free'
         return (
             <div className={toggleSetFree}>
                 <img className="c-creature-image" src={this.renderImg(this.props.creature.type)} />
@@ -31,7 +39,7 @@ export default class Creature extends Component {
                 <p>Type : {this.props.creature.type}</p>
                 <p>Age : {this.props.creature.age}</p>
                 <p>Mana : {this.props.creature.mana}</p>
-                <button type="button" className="btn btn-secondary" onClick={this.handleClick.bind(this, this.props.creature.id)}>{toggleButtonText}</button>
+                {this.renderButton()}
             </div>
         )
     }
