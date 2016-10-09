@@ -24,7 +24,7 @@ export default class Game extends Component {
         if(this.props.creatures.length <= 9 ){
             return <button type="button" className="btn btn-primary c-play" data-toggle="modal" data-target="#modal" onClick={this.handleClick.bind(this)}>Catch a Creature</button>
         } else {
-            return <button type="button" className="btn btn-primary c-play" data-toggle="modal" data-target="#modal" onClick={this.newGame.bind(this)}> Basket's Full, start a new game </button>
+            return  <h2>No more cages left to catch creatures! </h2>
         }
     }
 
