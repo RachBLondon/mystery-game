@@ -90,3 +90,8 @@ body {
     font-family: 'Almendra Display', cursive;
     font-size: 4em;
 }
+
+
+.container  .c-creature-container {
+    margin-left: 10%;
+}

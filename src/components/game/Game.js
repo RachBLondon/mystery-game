@@ -45,7 +45,7 @@ export default class Game extends Component {
                             <div className='c-play-button'>
                                 {this.renderButton()}
                             </div>
-                            <div className="row">
+                            <div className="row c-creature-container">
                             {this.renderCreatures.call(this)}
                             </div>
                         </div>
