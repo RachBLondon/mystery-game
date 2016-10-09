@@ -4,7 +4,6 @@ import {
     NOTIFY_ERROR,
     ADD_NAME_TO_NEW_CREATURE,
     SORT_BY,
-    CREATE_NEW_CREATURE,
     START_SETTING_FREE
 } from './../actions/actionTypes'
 
@@ -21,8 +20,6 @@ export default function view( state = { sortKey : 'age'}, action) {
             return Object.assign({}, state, {nameError: false})
         case SORT_BY :
             return Object.assign({}, state, {sortKey : action.key})
-        case CREATE_NEW_CREATURE :
-            return Object.assign({}, state, {modalContent : 'newCreatureForm'})
         case START_SETTING_FREE :
             return Object.assign({})
         default:

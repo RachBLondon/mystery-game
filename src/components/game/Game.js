@@ -57,7 +57,6 @@ export default class Game extends Component {
                                notifyError={this.props.notifyError}
                                sortBy={this.props.sortBy}
                                sortKey={this.props.sortKey}
-                               modalContent={this.props.modalContent}
                         />
                     </div>
                 </div>)
