@@ -1,22 +1,26 @@
+body {
+    font-family: 'Cardo', Georgia, serif !important;
+    background: url('./../assets/rolling-hills-backround.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .c-sort-tabs {
-    margin: 20px;
+    margin: 10px 20px 130px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 0px;
 }
 
-.u_set_free {
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0s 15s, opacity 15s linear;
-    background-color: #00d6b2;
-    border-radius: 5rem;
-    text-align: center;
-}
 .c-sort-tabs .nav .nav-item .u-active {
     background-color: rgb(101, 165, 162);
     border-color: rgb(101, 165, 162);
     transition-duration: 1s;
+}
+.c-sort-tabs a {
+    cursor: pointer;
 }
 
 .c-sort-tabs .nav .nav-item .u-active:hover {
@@ -48,41 +52,98 @@
     border-color: #f7f7f9;
 }
 
-.c-creature {
-    visibility: visible;
-    opacity: 1;
+.u_set_free {
+    opacity: 0;
     transition: opacity 15s linear;
-    background-color: rgb(217, 135, 37);
+    background-color: rgb(246, 239, 229);
+    text-align: center;
+}
+
+.c-creature {
+    opacity: 1;
+    background-color: rgb(246, 239, 229);
     border-radius: 0.25rem;
     text-align: center;
     padding: 10px;
     margin: 10px;
 }
 
-.c-creature h5 {
-    font-family: 'Fredericka the Great', cursive;
-}
-
 .modal-header h4 {
-    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Almendra Display', cursive;
 }
-
 
 .c-creature-image {
     border-radius: 50%;
     height: 60px;
 }
 
-.c-score-card {
-    background-color: rgb(244, 237, 227);
-    padding: 20px;
-    border-radius: 0.25rem;
+.c-score-card{
+    padding-left: 15%;
+}
+
+.c-score-card  p:nth-child(1), p:nth-child(2) {
+    padding-left: 20%;
 }
 
 .c-app .c-nav-bar{
-    background-color:  rgb(244, 237, 227);
+    background-color:  transparent;
 }
 .c-app .c-nav-bar a {
-    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Almendra Display', cursive;
     font-size: 4em;
+}
+
+.container  .c-creature-container {
+    margin-left: 10%;
+}
+
+.c-score-cloud {
+    width: 350px; height: 120px;
+    background: #f2f9fe;
+    border-radius: 100px;
+    position: relative;
+}
+
+.c-score-cloud:after, .c-score-cloud:before {
+    content: '';
+    position: absolute;
+    background: #f2f9fe;
+    z-index: -1
+}
+
+.c-score-cloud:after {
+    width: 100px; height: 100px;
+    top: -50px; left: 50px;
+    border-radius: 100px;
+}
+
+.c-score-cloud:before {
+    width: 140px;
+    height: 140px;
+    top: -50px;
+    right: 70px;
+    border-radius: 200px;
+}
+.c-score-card-container-animate{
+    position: relative;
+    width: 300px; height: 300px;
+    left: 30%;
+    animation: float 2s 0s infinite alternate;
+}
+
+.c-score-card-container{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    z-index: 1;
+}
+
+@keyframes float {
+    from {
+        margin-top: 200px;
+    }
+
+    to {
+        margin-top: 190px;
+    }
 }

@@ -19,12 +19,11 @@ describe('<Game />', ()=> {
         wrapper = shallow(<Game creatures={creatures} nameError={false}/>)
     })
 
-
     it('renders SortTabs', ()=>{
         expect(wrapper.find(SortTabs)).to.have.length(1)
     })
 
-    it('redners Modal', ()=>{
+    it('renders Modal', ()=>{
         expect(wrapper.find(Modal)).to.have.length(1)
     })
 

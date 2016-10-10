@@ -3,22 +3,6 @@ import NewCreatureForm from './modalContent/NewCreatureForm'
 
 
 export default class Modal extends Component {
-
-    renderContent(contentState){
-        if(contentState === 'newCreatureForm'){
-            return    <NewCreatureForm view={this.props.view}
-                                       creatures={this.props.creatures}
-                                       addNameToNewCreature={this.props.addNameToNewCreature}
-                                       notifyError={this.props.notifyError}
-                                       sortBy={this.props.sortBy}
-                                       sortKey={this.props.sortKey}
-                                       hideModal={this.props.hideModal}
-            />
-        } else if(contentState === 'releaseModal'){
-            return <ReleaseModal />
-        }
-    }
-
     render() {
         const style = this.props.view.displayModal ? {display: 'block', backgroundColor: 'rgba(89,89,89,0.5)'} : null
 
